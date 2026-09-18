@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ipmation"
+version = "0.1.0"
+description = "A Python library for IP, WHOIS, and DNS lookups via public APIs"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "IPmation" }]
+keywords = ["ip", "whois", "rdap", "dns", "geolocation"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["httpx>=0.24"]
+
+[project.urls]
+Homepage = "https://www.ipmation.com"
+Repository = "https://github.com/ipmation/python"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ipmation"]
